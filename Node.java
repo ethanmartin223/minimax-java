@@ -1,8 +1,9 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Node {
 
-    private Node parent;
+    private final Node parent;
     private ArrayList<Node> children;
     private int value;
 
@@ -20,5 +21,15 @@ public class Node {
 
     public void addChild(int v) {
         this.children.add(new Node(v, this));
+    }
+
+    public List<Node> getChildren() {return children.size()>0?children:null;}
+
+    public Node getParent() {return parent;}
+
+    public int getValue() {return value;};
+
+    public List<Node> minimax(Node startingNode) {
+        for
     }
 }
